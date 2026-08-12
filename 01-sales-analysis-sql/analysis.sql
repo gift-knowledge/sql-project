@@ -6,19 +6,19 @@ SELECT COUNT (order_id) AS total_orders FROM orders; SELECT SUM(quantity * price
 -- Sales Analysis Project : Day 2
 -- ==========================================
 
--- Task 1: Orders with price > 3000
+-- Q1: Which orders have a price above 3,000 THB?
 SELECT * FROM orders WHERE price > 3000;
 
--- Task 2: Products sorted by price
+-- Q2: Which products have the highest prices?
 SELECT * FROM orders ORDER BY price DESC;
 
--- Task 3: Revenue by customer
+-- Q3: Which customer generates the most revenue?
 SELECT customer, SUM(quantity * price) AS total_revenue FROM orders GROUP BY customer;
 
--- Task 4: Average price by category
+-- Q4: What is the average product price by category?
 SELECT category, AVG(price) AS avg_price FROM orders GROUP BY category;
 
--- Task 5: Order count by category
+-- Q5: How many orders are in each category?
 SELECT category, COUNT(*) AS Order_count FROM orders GROUP BY category;
 
 -- Task 6: Top customer by revenue
