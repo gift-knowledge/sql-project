@@ -19,3 +19,21 @@
 *   **Task 3 (ยอดซื้อของลูกค้าแต่ละคน):** Alice = 26,500 บาท, Bob = 6,000 บาท, John = 6,000 บาท
 *   **Task 4 (ยอดขายตามหมวดหมู่สินค้า):** Electronics = 27,500 บาท, Furniture = 11,000 บาท
 *   **Task 5 (สินค้าที่ทำรายได้สูงสุด):** Laptop (ทำรายได้รวม 25,000 บาท)
+
+
+## ❓ Business Questions
+1. Which orders have a price above 3,000 THB?
+2. Which products have the highest prices?
+3. Which customer generates the most revenue?
+4. What is the average product price by category?
+5. How many orders are in each category?
+
+## 🛠️ Key Skills
+- SELECT
+- WHERE
+- ORDER BY
+- GROUP BY
+- COUNT
+- SUM
+- AVG
+
