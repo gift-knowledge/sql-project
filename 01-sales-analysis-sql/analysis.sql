@@ -10,10 +10,10 @@ SELECT COUNT (order_id) AS total_orders FROM orders; SELECT SUM(quantity * price
 SELECT  product, price  FROM orders WHERE price > 3000;
 
 -- Q2: Which products have the highest prices?
-SELECT * FROM orders ORDER BY price DESC;
+SELECT * FROM orders ORDER BY price DESC LIMIT 1;
 
 -- Q3: Which customer generates the most revenue?
-SELECT customer, SUM(quantity * price) AS total_revenue FROM orders GROUP BY customer;
+SELECT customer, SUM(quantity * price) AS total_revenue FROM orders GROUP BY customer ORDER BY  total_revenue DESC LIMIT 1;
 
 -- Q4: What is the average product price by category?
 SELECT category, AVG(price) AS avg_price FROM orders GROUP BY category;
