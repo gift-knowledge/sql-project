@@ -7,7 +7,7 @@ SELECT COUNT (order_id) AS total_orders FROM orders; SELECT SUM(quantity * price
 -- ==========================================
 
 -- Q1: Which orders have a price above 3,000 THB?
-SELECT * FROM orders WHERE price > 3000;
+SELECT  product, price  FROM orders WHERE price > 3000;
 
 -- Q2: Which products have the highest prices?
 SELECT * FROM orders ORDER BY price DESC;
