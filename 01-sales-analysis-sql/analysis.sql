@@ -121,10 +121,8 @@ LIMIT 1; -- Retrieved only the bottom customer with lowest revenue
 SELECT 
     product,
     price,
-    -- Evaluate product prices into customized logical tiers
-    CASE 
+    CASE
         WHEN price >= 5000 THEN 'High'
-        WHEN price = 0 THEN 'Free'
         ELSE 'Normal'
     END AS price_level
 FROM orders;
@@ -132,12 +130,10 @@ FROM orders;
 
 SELECT 
     customer,
-    -- Calculate total revenue using quantity multiplied by unit price
     SUM(quantity * price) AS total_revenue
 FROM orders
 GROUP BY customer
-HAVING SUM(quantity * price) > 5000; -- HAVING filters the total amount after checking out.
-/* "We used the HAVING clause to filter customers based on their aggregated total revenue." */
+HAVING total_revenue > 5000;
 
 
 SELECT 
@@ -145,6 +141,7 @@ SELECT
     SUM(quantity * price) AS total_revenue
 FROM orders
 GROUP BY customer
-HAVING SUM(quantity * price) > 5000
+HAVING total_revenue > 5000
 ORDER BY total_revenue DESC;
-/* This query ranks our highest-spending customers first */
+
+
