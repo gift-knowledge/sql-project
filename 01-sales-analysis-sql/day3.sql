@@ -13,7 +13,7 @@ SELECT
     SUM(quantity * price) AS total_revenue
 FROM orders
 GROUP BY customer
-HAVING total_revenue > 5000;
+HAVING SUM(quantity * price) > 5000
 
 
 SELECT 
@@ -21,5 +21,5 @@ SELECT
     SUM(quantity * price) AS total_revenue
 FROM orders
 GROUP BY customer
-HAVING total_revenue > 5000
+HAVING SUM(quantity * price) > 5000
 ORDER BY total_revenue DESC;
