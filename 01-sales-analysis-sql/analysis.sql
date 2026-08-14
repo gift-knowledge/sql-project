@@ -115,3 +115,36 @@ LIMIT 1; -- Retrieved only the bottom customer with lowest revenue
 - คำอ่าน: ดิส ควิ-รี่ | แคล-คู-เล-เตด โท-เทิล เร-เว-นิว | เพอร์ คัส-โต-เมอร์ | ซอร์-เทด เดอะ รี-ซัลท์ส | ฟรอม โล-เวสท์ ทู ไฮ-เอสท์ | แอนด์ ยูสด์ ลิ-มิท วัน | ทู ไฟนด์ เดอะ คัส-โต-เมอร์ วิธ เดอะ โล-เวสท์ สเปน-ดิง
 - แปลไทย: คิวรี่นี้ | คำนวณรายได้รวม | แยกตามลูกค้าแต่ละราย | แล้วจัดเรียงผลลัพธ์ | จากน้อยที่สุดไปมากที่สุด | จากนั้นใช้คำสั่ง LIMIT 1 | เพื่อหาลูกค้าที่มีการใช้จ่ายรวมต่ำที่สุด
 */
+
+
+
+SELECT 
+    product,
+    price,
+    -- Evaluate product prices into customized logical tiers
+    CASE 
+        WHEN price >= 5000 THEN 'High'
+        WHEN price = 0 THEN 'Free'
+        ELSE 'Normal'
+    END AS price_level
+FROM orders;
+
+
+SELECT 
+    customer,
+    -- Calculate total revenue using quantity multiplied by unit price
+    SUM(quantity * price) AS total_revenue
+FROM orders
+GROUP BY customer
+HAVING SUM(quantity * price) > 5000; -- HAVING filters the total amount after checking out.
+/* "We used the HAVING clause to filter customers based on their aggregated total revenue." */
+
+
+SELECT 
+    customer,
+    SUM(quantity * price) AS total_revenue
+FROM orders
+GROUP BY customer
+HAVING SUM(quantity * price) > 5000
+ORDER BY total_revenue DESC;
+/* This query ranks our highest-spending customers first */
