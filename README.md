@@ -52,34 +52,6 @@ DAY 4
 - **FROM orders**: Specifies that the data is retrieved from the `orders` table.
 
 
-🗣️ ประโยคสำหรับอธิบายตอนพูด
-
-We defined three price tiers in the price_level column.
-
-คำอ่าน:
-วี ดีไฟนด์ ทรี ไพรซ์ เทียร์ส อิน เดอะ ไพรซ์ เลเวล คอลัมน์
-
-แปล:
-เราได้กำหนดระดับราคาไว้ 3 ระดับในคอลัมน์ price_level
-
-คำว่า price tiers ดีมากสำหรับงาน Tech/Business เพราะหมายถึง ระดับราคา / กลุ่มราคา
-
-ถ้าจะอธิบาย SQL ทั้งก้อนตอนสัมภาษณ์
-
-ใช้ประโยคนี้ได้เลย:
-
-This query categorizes products into three price tiers based on their prices: High, Medium, and Low.
-
-คำอ่าน:
-ดิส คิวรี แคท-ทะ-กอ-ไรซิส พรอดักท์ส อินทู ทรี ไพรซ์ เทียร์ส เบสต์ ออน แดร์ ไพรซิส: ไฮ เมเดียม แอนด์ โลว์
-
-แปล:
-SQL Query นี้จัดหมวดหมู่สินค้าออกเป็น 3 ระดับราคาตามราคา ได้แก่ High, Medium และ Low
-
-และถ้าจะอธิบาย CASE:
-
-We use a CASE expression to classify products based on their prices.
-
-= เราใช้ CASE expression เพื่อจัดประเภทสินค้าตามราคา
-
-ประโยคนี้ควรจำมากที่สุด เพราะเป็นรูปแบบที่เอาไปใช้พูดอธิบาย SQL ในงานจริงหรือสัมภาษณ์ได้ครับ
+This query categorizes products into three price tiers.
+We use CASE to classify products based on their prices.
+The price levels are High, Medium, and Low.
