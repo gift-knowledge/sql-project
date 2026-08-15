@@ -37,3 +37,13 @@
 - SUM
 - AVG
 
+DAY 4
+### Explanation
+
+- **SELECT**: Retrieves the `product` and `price` columns from the table.
+- **CASE**: Starts a conditional expression, similar to an "if" statement.
+- **WHEN price >= 5000 THEN 'High'**: If the price is 5000 or higher, the value is set to `'High'`.
+- **WHEN price >= 3000 THEN 'Medium'**: If the price is 3000 or higher but less than 5000, the value is set to `'Medium'`.
+- **ELSE 'Low'**: If none of the above conditions are met, the value is set to `'Low'`.
+- **END AS price_level**: Ends the conditional expression and assigns the result to the `price_level` column.
+- **FROM orders**: Specifies that the data is retrieved from the `orders` table.
