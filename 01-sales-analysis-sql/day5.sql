@@ -1,10 +1,10 @@
 SELECT * 
-FROM products 
+FROM orders 
 WHERE price > 3000;
 
 
 SELECT * 
-FROM products 
+FROM orders
 ORDER BY price DESC 
 LIMIT 3;
 
