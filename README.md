@@ -55,3 +55,17 @@ DAY 4
 This query categorizes products into three price tiers.
 We use CASE to classify products based on their prices.
 The price levels are High, Medium, and Low.
+
+
+# Day 6: Business Segmentation using CASE and Aggregations
+
+## Project Overview
+This project demonstrates how to classify data dynamically and perform business analysis using SQL conditional logic and aggregate functions without relying on subqueries or joins.
+
+## Technical Concepts Applied
+- **Dynamic Classification:** Implemented `CASE WHEN` statements to segment products into distinct price performance levels ('High', 'Medium', 'Low').
+- **Data Aggregation:** Combined conditional logic with `COUNT(*)` and `SUM()` to calculate total order volumes and generate summary revenue insights.
+- **Result Filtering:** Utilized `ORDER BY ... DESC` alongside `LIMIT 1` to efficiently identify and isolate the top-performing business segment.
+
+## SQL Query Developed
+(You can copy your final day6.sql query and paste it here)
